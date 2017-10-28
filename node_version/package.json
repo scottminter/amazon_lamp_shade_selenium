@@ -2,7 +2,7 @@
   "name": "amazon_lamp_shade_search",
   "version": "1.0.0",
   "description": "Searches for lamp shades on Amazon.com.",
-  "main": "index.js",
+  "main": "lampShadeTest.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +11,7 @@
   "dependencies": {
     "chromedriver": "^2.33.2",
     "mocha": "^4.0.1",
+    "mochawesome": "^2.3.1",
     "selenium-webdriver": "^3.6.0",
     "should": "^13.1.3"
   }

@@ -10,8 +10,11 @@ to pull down my code and run:
 npm install
 ```
 If you are unfamiliar with Node and NPM this will install the project dependencies in a directory
-called 'node_modules'.  At this point you should be ready to run the tests.  To run them
-I used the Mocha library.  So run the command
+called 'node_modules'.  At this point you should be ready to run the tests.  I used the Mocha library
+as a testing library.  Also, to produce the report for the tests I used the Mochawesome library.
+To run the test:
 ```
-mocha lampShadeTest.js
+mocha lampShadeTest.js --reporter mochawesome
 ```
+
+Then to see the report open the 'mochawesome.html' found under the mochawesome-resport directory.
