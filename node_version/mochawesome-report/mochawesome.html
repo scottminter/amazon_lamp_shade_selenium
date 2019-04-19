@@ -6,9 +6,9 @@
     &quot;passes&quot;: 1,
     &quot;pending&quot;: 0,
     &quot;failures&quot;: 0,
-    &quot;start&quot;: &quot;2017-10-28T14:59:00.921Z&quot;,
-    &quot;end&quot;: &quot;2017-10-28T14:59:18.303Z&quot;,
-    &quot;duration&quot;: 17382,
+    &quot;start&quot;: &quot;2017-10-31T18:24:46.238Z&quot;,
+    &quot;end&quot;: &quot;2017-10-31T18:25:03.199Z&quot;,
+    &quot;duration&quot;: 16961,
     &quot;testsRegistered&quot;: 1,
     &quot;passPercent&quot;: 100,
     &quot;pendingPercent&quot;: 0,
@@ -30,7 +30,7 @@
             &quot;title&quot;: &quot;Should verify the price of the selected lamp shade matches the subtotal of the cart.&quot;,
             &quot;fullTitle&quot;: &quot;Browse to Amazon.com and search for lamp shades Should verify the price of the selected lamp shade matches the subtotal of the cart.&quot;,
             &quot;timedOut&quot;: false,
-            &quot;duration&quot;: 9405,
+            &quot;duration&quot;: 10509,
             &quot;state&quot;: &quot;passed&quot;,
             &quot;speed&quot;: &quot;slow&quot;,
             &quot;pass&quot;: true,
@@ -39,8 +39,8 @@
             &quot;code&quot;: &quot;// wait for the search box to be located\ndriver.wait(until.elementLocated(by.id(&#x27;twotabsearchtextbox&#x27;)), 10000)\n    .then((searchBox) =&gt; {\n        // enter &#x27;lamp shades&#x27; into the search box\n        searchBox.sendKeys(&#x27;lamp shades&#x27;);\n    })\n    .then(() =&gt; {\n        // click the search button\n        driver.findElement(by.xpath(&#x27;//*[@id=\&quot;nav-search\&quot;]/form/div[2]/div/input&#x27;)).click();\n    })\n    .then(() =&gt; {\n        // select the third result\n        driver.wait(until.elementLocated(by.id(&#x27;result_3&#x27;)), 10000).click();\n    })\n    .then(() =&gt; {\n        // get the price of that item\n        return driver.wait(until.elementLocated(by.id(&#x27;priceblock_ourprice&#x27;)), 10000).getText();\n    })\n    .then((priceText) =&gt; {\n        // store the price\n        lampShadePrice = priceText;\n        // add that item to the cart\n        driver.findElement(by.id(&#x27;add-to-cart-button&#x27;)).click();\n    })\n    .then(() =&gt; {\n        // get the subtotal\n        return driver.wait(until.elementLocated(by.xpath(&#x27;//*[@id=\&quot;hlb-subcart\&quot;]/div[1]/span/span[2]&#x27;)), 10000).getText();\n    })\n    .then((subTotText) =&gt; {\n        // the should library asserts that the sub total amount is equal to the price of the lamp shade\n        should(subTotText).equal(lampShadePrice);\n        done();\n    })\n    .catch((err) =&gt; {\n        should(err).equal(null);\n        done();\n    });&quot;,
             &quot;err&quot;: {},
             &quot;isRoot&quot;: false,
-            &quot;uuid&quot;: &quot;254ee8aa-08fb-4b5f-a776-af5e5bef1c39&quot;,
-            &quot;parentUUID&quot;: &quot;9d79cb59-021a-46a6-91a1-5a56a14271ca&quot;,
+            &quot;uuid&quot;: &quot;f1a3b7d9-abc8-43a7-8aae-9d4ebabe20a7&quot;,
+            &quot;parentUUID&quot;: &quot;7b5fb660-a4d8-4509-8f0d-62d7e0615a42&quot;,
             &quot;isHook&quot;: false,
             &quot;skipped&quot;: false
           }
@@ -49,21 +49,21 @@
         &quot;root&quot;: false,
         &quot;_timeout&quot;: 15000,
         &quot;file&quot;: &quot;/lampShadeTest.js&quot;,
-        &quot;uuid&quot;: &quot;9d79cb59-021a-46a6-91a1-5a56a14271ca&quot;,
+        &quot;uuid&quot;: &quot;7b5fb660-a4d8-4509-8f0d-62d7e0615a42&quot;,
         &quot;beforeHooks&quot;: [
           {
             &quot;title&quot;: &quot;\&quot;before all\&quot; hook&quot;,
             &quot;fullTitle&quot;: &quot;Browse to Amazon.com and search for lamp shades \&quot;before all\&quot; hook&quot;,
             &quot;timedOut&quot;: false,
-            &quot;duration&quot;: 5898,
+            &quot;duration&quot;: 4382,
             &quot;pass&quot;: false,
             &quot;fail&quot;: false,
             &quot;pending&quot;: false,
             &quot;code&quot;: &quot;// go to amazon in a chrome window\ndriver.get(url).then(() =&gt; done());&quot;,
             &quot;err&quot;: {},
             &quot;isRoot&quot;: false,
-            &quot;uuid&quot;: &quot;604cb2dd-f7b0-459d-8d51-e047b013ce41&quot;,
-            &quot;parentUUID&quot;: &quot;9d79cb59-021a-46a6-91a1-5a56a14271ca&quot;,
+            &quot;uuid&quot;: &quot;4e37c2ac-7645-4c5f-8bd0-827d4073c961&quot;,
+            &quot;parentUUID&quot;: &quot;7b5fb660-a4d8-4509-8f0d-62d7e0615a42&quot;,
             &quot;isHook&quot;: true,
             &quot;skipped&quot;: false
           }
@@ -80,8 +80,8 @@
             &quot;code&quot;: &quot;driver.sleep(2000);\nreturn driver.quit();&quot;,
             &quot;err&quot;: {},
             &quot;isRoot&quot;: false,
-            &quot;uuid&quot;: &quot;794b4a97-bb7b-41ba-8b08-5ac1550e9ded&quot;,
-            &quot;parentUUID&quot;: &quot;9d79cb59-021a-46a6-91a1-5a56a14271ca&quot;,
+            &quot;uuid&quot;: &quot;ce6e85d2-9059-49bd-a2a2-b2e2355215f1&quot;,
+            &quot;parentUUID&quot;: &quot;7b5fb660-a4d8-4509-8f0d-62d7e0615a42&quot;,
             &quot;isHook&quot;: true,
             &quot;skipped&quot;: false
           }
@@ -92,7 +92,7 @@
             &quot;title&quot;: &quot;Should verify the price of the selected lamp shade matches the subtotal of the cart.&quot;,
             &quot;fullTitle&quot;: &quot;Browse to Amazon.com and search for lamp shades Should verify the price of the selected lamp shade matches the subtotal of the cart.&quot;,
             &quot;timedOut&quot;: false,
-            &quot;duration&quot;: 9405,
+            &quot;duration&quot;: 10509,
             &quot;state&quot;: &quot;passed&quot;,
             &quot;speed&quot;: &quot;slow&quot;,
             &quot;pass&quot;: true,
@@ -101,8 +101,8 @@
             &quot;code&quot;: &quot;// wait for the search box to be located\ndriver.wait(until.elementLocated(by.id(&#x27;twotabsearchtextbox&#x27;)), 10000)\n    .then((searchBox) =&gt; {\n        // enter &#x27;lamp shades&#x27; into the search box\n        searchBox.sendKeys(&#x27;lamp shades&#x27;);\n    })\n    .then(() =&gt; {\n        // click the search button\n        driver.findElement(by.xpath(&#x27;//*[@id=\&quot;nav-search\&quot;]/form/div[2]/div/input&#x27;)).click();\n    })\n    .then(() =&gt; {\n        // select the third result\n        driver.wait(until.elementLocated(by.id(&#x27;result_3&#x27;)), 10000).click();\n    })\n    .then(() =&gt; {\n        // get the price of that item\n        return driver.wait(until.elementLocated(by.id(&#x27;priceblock_ourprice&#x27;)), 10000).getText();\n    })\n    .then((priceText) =&gt; {\n        // store the price\n        lampShadePrice = priceText;\n        // add that item to the cart\n        driver.findElement(by.id(&#x27;add-to-cart-button&#x27;)).click();\n    })\n    .then(() =&gt; {\n        // get the subtotal\n        return driver.wait(until.elementLocated(by.xpath(&#x27;//*[@id=\&quot;hlb-subcart\&quot;]/div[1]/span/span[2]&#x27;)), 10000).getText();\n    })\n    .then((subTotText) =&gt; {\n        // the should library asserts that the sub total amount is equal to the price of the lamp shade\n        should(subTotText).equal(lampShadePrice);\n        done();\n    })\n    .catch((err) =&gt; {\n        should(err).equal(null);\n        done();\n    });&quot;,
             &quot;err&quot;: {},
             &quot;isRoot&quot;: false,
-            &quot;uuid&quot;: &quot;254ee8aa-08fb-4b5f-a776-af5e5bef1c39&quot;,
-            &quot;parentUUID&quot;: &quot;9d79cb59-021a-46a6-91a1-5a56a14271ca&quot;,
+            &quot;uuid&quot;: &quot;f1a3b7d9-abc8-43a7-8aae-9d4ebabe20a7&quot;,
+            &quot;parentUUID&quot;: &quot;7b5fb660-a4d8-4509-8f0d-62d7e0615a42&quot;,
             &quot;isHook&quot;: false,
             &quot;skipped&quot;: false
           }
@@ -122,7 +122,7 @@
         &quot;hasFailures&quot;: false,
         &quot;hasPending&quot;: false,
         &quot;hasSkipped&quot;: false,
-        &quot;duration&quot;: 9405,
+        &quot;duration&quot;: 10509,
         &quot;rootEmpty&quot;: false
       }
     ],
@@ -130,7 +130,7 @@
     &quot;pending&quot;: [],
     &quot;root&quot;: true,
     &quot;_timeout&quot;: 2000,
-    &quot;uuid&quot;: &quot;763d2591-f0a8-46a4-a783-2ff6d099e128&quot;,
+    &quot;uuid&quot;: &quot;7d2a07cf-2319-4262-b044-3185c05a07d7&quot;,
     &quot;beforeHooks&quot;: [],
     &quot;afterHooks&quot;: [],
     &quot;fullFile&quot;: &quot;&quot;,
@@ -159,7 +159,7 @@
       &quot;title&quot;: &quot;Should verify the price of the selected lamp shade matches the subtotal of the cart.&quot;,
       &quot;fullTitle&quot;: &quot;Browse to Amazon.com and search for lamp shades Should verify the price of the selected lamp shade matches the subtotal of the cart.&quot;,
       &quot;timedOut&quot;: false,
-      &quot;duration&quot;: 9405,
+      &quot;duration&quot;: 10509,
       &quot;state&quot;: &quot;passed&quot;,
       &quot;speed&quot;: &quot;slow&quot;,
       &quot;pass&quot;: true,
@@ -168,8 +168,8 @@
       &quot;code&quot;: &quot;// wait for the search box to be located\ndriver.wait(until.elementLocated(by.id(&#x27;twotabsearchtextbox&#x27;)), 10000)\n    .then((searchBox) =&gt; {\n        // enter &#x27;lamp shades&#x27; into the search box\n        searchBox.sendKeys(&#x27;lamp shades&#x27;);\n    })\n    .then(() =&gt; {\n        // click the search button\n        driver.findElement(by.xpath(&#x27;//*[@id=\&quot;nav-search\&quot;]/form/div[2]/div/input&#x27;)).click();\n    })\n    .then(() =&gt; {\n        // select the third result\n        driver.wait(until.elementLocated(by.id(&#x27;result_3&#x27;)), 10000).click();\n    })\n    .then(() =&gt; {\n        // get the price of that item\n        return driver.wait(until.elementLocated(by.id(&#x27;priceblock_ourprice&#x27;)), 10000).getText();\n    })\n    .then((priceText) =&gt; {\n        // store the price\n        lampShadePrice = priceText;\n        // add that item to the cart\n        driver.findElement(by.id(&#x27;add-to-cart-button&#x27;)).click();\n    })\n    .then(() =&gt; {\n        // get the subtotal\n        return driver.wait(until.elementLocated(by.xpath(&#x27;//*[@id=\&quot;hlb-subcart\&quot;]/div[1]/span/span[2]&#x27;)), 10000).getText();\n    })\n    .then((subTotText) =&gt; {\n        // the should library asserts that the sub total amount is equal to the price of the lamp shade\n        should(subTotText).equal(lampShadePrice);\n        done();\n    })\n    .catch((err) =&gt; {\n        should(err).equal(null);\n        done();\n    });&quot;,
       &quot;err&quot;: {},
       &quot;isRoot&quot;: false,
-      &quot;uuid&quot;: &quot;254ee8aa-08fb-4b5f-a776-af5e5bef1c39&quot;,
-      &quot;parentUUID&quot;: &quot;9d79cb59-021a-46a6-91a1-5a56a14271ca&quot;,
+      &quot;uuid&quot;: &quot;f1a3b7d9-abc8-43a7-8aae-9d4ebabe20a7&quot;,
+      &quot;parentUUID&quot;: &quot;7b5fb660-a4d8-4509-8f0d-62d7e0615a42&quot;,
       &quot;isHook&quot;: false,
       &quot;skipped&quot;: false
     }
@@ -180,7 +180,7 @@
       &quot;title&quot;: &quot;Should verify the price of the selected lamp shade matches the subtotal of the cart.&quot;,
       &quot;fullTitle&quot;: &quot;Browse to Amazon.com and search for lamp shades Should verify the price of the selected lamp shade matches the subtotal of the cart.&quot;,
       &quot;timedOut&quot;: false,
-      &quot;duration&quot;: 9405,
+      &quot;duration&quot;: 10509,
       &quot;state&quot;: &quot;passed&quot;,
       &quot;speed&quot;: &quot;slow&quot;,
       &quot;pass&quot;: true,
@@ -189,8 +189,8 @@
       &quot;code&quot;: &quot;// wait for the search box to be located\ndriver.wait(until.elementLocated(by.id(&#x27;twotabsearchtextbox&#x27;)), 10000)\n    .then((searchBox) =&gt; {\n        // enter &#x27;lamp shades&#x27; into the search box\n        searchBox.sendKeys(&#x27;lamp shades&#x27;);\n    })\n    .then(() =&gt; {\n        // click the search button\n        driver.findElement(by.xpath(&#x27;//*[@id=\&quot;nav-search\&quot;]/form/div[2]/div/input&#x27;)).click();\n    })\n    .then(() =&gt; {\n        // select the third result\n        driver.wait(until.elementLocated(by.id(&#x27;result_3&#x27;)), 10000).click();\n    })\n    .then(() =&gt; {\n        // get the price of that item\n        return driver.wait(until.elementLocated(by.id(&#x27;priceblock_ourprice&#x27;)), 10000).getText();\n    })\n    .then((priceText) =&gt; {\n        // store the price\n        lampShadePrice = priceText;\n        // add that item to the cart\n        driver.findElement(by.id(&#x27;add-to-cart-button&#x27;)).click();\n    })\n    .then(() =&gt; {\n        // get the subtotal\n        return driver.wait(until.elementLocated(by.xpath(&#x27;//*[@id=\&quot;hlb-subcart\&quot;]/div[1]/span/span[2]&#x27;)), 10000).getText();\n    })\n    .then((subTotText) =&gt; {\n        // the should library asserts that the sub total amount is equal to the price of the lamp shade\n        should(subTotText).equal(lampShadePrice);\n        done();\n    })\n    .catch((err) =&gt; {\n        should(err).equal(null);\n        done();\n    });&quot;,
       &quot;err&quot;: {},
       &quot;isRoot&quot;: false,
-      &quot;uuid&quot;: &quot;254ee8aa-08fb-4b5f-a776-af5e5bef1c39&quot;,
-      &quot;parentUUID&quot;: &quot;9d79cb59-021a-46a6-91a1-5a56a14271ca&quot;,
+      &quot;uuid&quot;: &quot;f1a3b7d9-abc8-43a7-8aae-9d4ebabe20a7&quot;,
+      &quot;parentUUID&quot;: &quot;7b5fb660-a4d8-4509-8f0d-62d7e0615a42&quot;,
       &quot;isHook&quot;: false,
       &quot;skipped&quot;: false
     }
